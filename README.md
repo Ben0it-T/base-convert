@@ -27,7 +27,7 @@ echo $bconv->convert(1000, 10, $alphabet);
 echo $bconv->convert('2db1', $alphabet, 10);
 // '1000'
 
-// 'Integer' bases are converted to alphabet strings anyways
+// 'Integer' bases are converted to alphabet strings.
 // Any invalid characters in the number passed for the conversion attempt are silently ignored.
 // Converting 100.4 from decimal to hexadecimal will convert 1004 from decimal to hexadecimal.
 echo $bconv->convert(100.4, 10, 16);
