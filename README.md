@@ -32,4 +32,10 @@ echo $bconv->convert('2db1', $alphabet, 10);
 // Converting 100.4 from decimal to hexadecimal will convert 1004 from decimal to hexadecimal.
 echo $bconv->convert(100.4, 10, 16);
 // '3ec'
+
+echo $bconv->convert(microtime(true), 10, 16);
+// something like 'fe215a4979b'
+
+echo $bconv->convert(microtime(true), 10, 62);
+// something like '4Xsps2f2'
 ```
