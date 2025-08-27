@@ -14,7 +14,10 @@ echo $bconv->convert(1000, 10, 8);
 
 // Convert 1000 from decimal to hexadecimal
 echo $bconv->convert(1000, 10, 16);
-// '3e8'
+// '3E8'
+
+echo $bconv->convert(1000, 10, "0123456789ABCDEF");
+// '3E8'
 
 echo $bconv->convert(1000, 10, "0123456789abcdef");
 // '3e8'
@@ -31,11 +34,11 @@ echo $bconv->convert('2db1', $alphabet, 10);
 // Any invalid characters in the number passed for the conversion attempt are silently ignored.
 // Converting 100.4 from decimal to hexadecimal will convert 1004 from decimal to hexadecimal.
 echo $bconv->convert(100.4, 10, 16);
-// '3ec'
+// '3EC'
 
 echo $bconv->convert(microtime(true), 10, 16);
-// something like 'fe215a4979b'
+// something like 'FF928DF9C62'
 
 echo $bconv->convert(microtime(true), 10, 62);
-// something like '4Xsps2f2'
+// something like '4zCaaPo2'
 ```

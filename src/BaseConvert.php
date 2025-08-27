@@ -14,7 +14,7 @@ class BaseConvert {
 
     private int $min = 2;
     private int $max = 62;
-    private string $alphabet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    private string $alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     private string $base10_alphabet = '0123456789';
 
     public function __construct() {}
@@ -36,7 +36,7 @@ class BaseConvert {
                 return null;
             }
             if ($from_base < 37) {
-                $number = strtolower($number);
+                $number = strtoupper($number);
             }
             $from_base = substr($this->alphabet, 0, $from_base);
         }
@@ -46,7 +46,7 @@ class BaseConvert {
                 return null;
             }
             if ($to_base < 37) {
-               $number = strtolower($number);
+               $number = strtoupper($number);
             }
             $to_base = substr($this->alphabet, 0, $to_base);
         }
