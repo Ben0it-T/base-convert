@@ -45,9 +45,6 @@ class BaseConvert {
             if ($to_base < $this->min || $to_base > $this->max) {
                 return null;
             }
-            if ($to_base < 37) {
-               $number = strtoupper($number);
-            }
             $to_base = substr($this->alphabet, 0, $to_base);
         }
 
